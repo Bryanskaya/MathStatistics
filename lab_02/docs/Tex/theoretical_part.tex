@@ -1,0 +1,31 @@
+\section{Формулы для вычисления величин}
+Выборка:  $\vec{x} = (x_1, ..., x_n) $
+
+\subsection{Определение $\gamma$-доверительного интервала}
+Доверительным интервалом уровня $\gamma$ для параметра $\theta$ называется интервал ($\underline\theta(\vec x_n)$, $\overline\theta(\vec x_n)$), образующий выборочными значениями статистики $\underline\theta$ и $\overline\theta$.
+
+
+\begin{equation*}
+	M_{max} = max\{x_1, ..., x_n\}
+\end{equation*}
+
+
+
+
+\section{Границы $\gamma$-доверительного интервала}
+
+Пусть $\vec X_n$ — случайная выборка объема $n$ из генеральной совокупности $X$, распределенной по нормальному закону с параметрами $\mu$ и $\sigma^{2}$.
+
+\subsection{Оценка для математического ожидания}
+
+\begin{align}
+	\underline\mu(\vec X_n) &= \overline X -\frac{S(\vec X_n)}{\sqrt n}t_{1-\alpha}(n-1),\\
+	\overline\mu(\vec X_n)  &= \overline X +\frac{S(\vec X_n)}{\sqrt n}t_{1-\alpha}(n-1),
+\end{align}
+где $\overline X$ — оценка мат. ожидания, $n$ — число опытов, $S(\vec X_n)$ — точечная оценка дисперсии случайной выборки $\vec X_n$, $t_{1-\alpha}(n-1)$ — квантиль уровня $1-\alpha$ для распределения Стьюдента с $n-1$ степенями свободы, $\alpha$ — величина, равная $\displaystyle \frac{(1-\gamma)}2$.
+
+
+
+
+
+

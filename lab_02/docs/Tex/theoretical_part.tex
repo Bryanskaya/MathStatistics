@@ -1,28 +1,41 @@
 \section{Формулы для вычисления величин}
-Выборка:  $\vec{x} = (x_1, ..., x_n) $
-
 \subsection{Определение $\gamma$-доверительного интервала}
-Доверительным интервалом уровня $\gamma$ для параметра $\theta$ называется интервал ($\underline\theta(\vec x_n)$, $\overline\theta(\vec x_n)$), образующий выборочными значениями статистики $\underline\theta$ и $\overline\theta$.
-
-
+Доверительным интервалом уровня $\gamma$ для параметра $\theta$ называется интервал ($\underline\theta(\vec X)$, $\overline\theta(\vec X)$), образующий выборочными значениями статистики $\underline\theta$ и $\overline\theta$.\\
 \begin{equation*}
-	M_{max} = max\{x_1, ..., x_n\}
+	P\{\underline\theta(\vec X) <= x <= \overline\theta(\vec X) \} = \gamma
 \end{equation*}
-
-
-
 
 \section{Границы $\gamma$-доверительного интервала}
 
-Пусть $\vec X_n$ — случайная выборка объема $n$ из генеральной совокупности $X$, распределенной по нормальному закону с параметрами $\mu$ и $\sigma^{2}$.
+Пусть $\vec x = (x_1, ..., x_n)$ — случайная выборка объема $n$ из генеральной совокупности $X$, распределенной по нормальному закону с параметрами $\mu$ и $\sigma^{2}$.
+
+\textbf{$\gamma$-доверительный интервал для математического ожидания}
+\begin{equation*}
+	P\{\overline{X} - \dfrac{S(\vec{X})}{\sqrt{n}} t^{St(n-1)}_{\frac{1+\gamma}{2}} <= \mu <= \overline{X} + \dfrac{S(\vec{X})}{\sqrt{n}} t^{St(n-1)}_{\frac{1+\gamma}{2}} \} = \gamma
+\end{equation*}
+Т.е.\\
+\begin{equation*}
+	\underline\mu(\vec X) = \overline{X} - \dfrac{S(\vec{X})}{\sqrt{n}} t^{St(n-1)}_{\frac{1+\gamma}{2}}
+\end{equation*}
+
+\begin{equation*}
+	\overline\mu(\vec X)  = \overline{X} + \dfrac{S(\vec{X})}{\sqrt{n}} t^{St(n-1)}_{\frac{1+\gamma}{2}}
+\end{equation*}
 
 \subsection{Оценка для математического ожидания}
 
-\begin{align}
-	\underline\mu(\vec X_n) &= \overline X -\frac{S(\vec X_n)}{\sqrt n}t_{1-\alpha}(n-1),\\
-	\overline\mu(\vec X_n)  &= \overline X +\frac{S(\vec X_n)}{\sqrt n}t_{1-\alpha}(n-1),
-\end{align}
-где $\overline X$ — оценка мат. ожидания, $n$ — число опытов, $S(\vec X_n)$ — точечная оценка дисперсии случайной выборки $\vec X_n$, $t_{1-\alpha}(n-1)$ — квантиль уровня $1-\alpha$ для распределения Стьюдента с $n-1$ степенями свободы, $\alpha$ — величина, равная $\displaystyle \frac{(1-\gamma)}2$.
+\textbf{$\gamma$-доверительный интервал для дисперсии}
+\begin{equation*}
+	P\{ \dfrac{S^2(\vec{X}) (n-1)}{t^{\chi^{2}(n-1)}_{\frac{1+\gamma}{2}}} <= \sigma^2 <= \dfrac{S^2(\vec{X}) (n-1)}{t^{\chi^{2}(n-1)}_{\frac{1+\gamma}{2}}}  \} = \gamma
+\end{equation*}
+Т.е.\\
+\begin{equation*}
+	\underline\sigma(\vec X) = \dfrac{S^2(\vec{X}) (n-1)}{t^{\chi^{2}(n-1)}_{\frac{1+\gamma}{2}}}
+\end{equation*}
+
+\begin{equation*}
+	\overline\sigma(\vec X)  = \sigma^2 <= \dfrac{S^2(\vec{X}) (n-1)}{t^{\chi^{2}(n-1)}_{\frac{1+\gamma}{2}}}
+\end{equation*}
 
 
 
